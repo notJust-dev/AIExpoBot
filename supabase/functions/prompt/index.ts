@@ -83,10 +83,8 @@ Deno.serve(async (req) => {
   const contents = "".concat(...docsBoddies);
 
   const filledPrompt = buildFullPrompt(query, contents);
-  console.log(filledPrompt);
 
   const answer = await completion(filledPrompt);
-  console.log(answer.message.content);
 
   const data = {
     message: answer.message.content,
